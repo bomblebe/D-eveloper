@@ -1,0 +1,84 @@
+
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <title>"KhaoYai"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="zoom: 1;">
+    <div class="header">
+        <button class="loginbtn right">login</button>
+        <div class="nav right">
+            <ul class="navtab">
+                <li class="nav-item"><a class="nav-link active"href="#mainpage">หน้าหลัก</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about us">เกี่ยวกับเรา</a></li>
+            </ul>
+        </div>  
+    </div>
+
+     
+    <div class="slider">
+        <img class="sliderpic" src="https://bit.ly/364KGcK" alt="">
+    </div>
+    <div class="interest">
+        <h2>ข่าวที่น่าสนใจ</h2>
+        <div class="interestcontainer">
+            <a target="_blank" href="#interestnews1">
+                <div class="interestbox">
+                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
+                    <div class="desc">Add a description of the news here</div>
+                </div>
+            </a>
+            <a target="_blank" href="#interestnews2">
+                <div class="interestbox">
+                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
+                    <div class="desc">Add a description of the news here</div>
+                </div>
+            </a>
+            <a target="_blank" href="#interestnews3">
+                <div class="interestbox">
+                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
+                    <div class="desc">Add a description of the news here</div>
+                </div>
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="tab">
+        <div class="tabcontainer">
+            <button class="newstab newsbtn" onclick="openNews('latest')">#ข่าวใหม่ล่าสุด</button>
+            <button class="newstab newsbtn" onclick="openNews('trend')">ช่าวยอดนิยม</button>
+            <button class="newstab newsbtn" onclick="openNews('all')">ข่าวทั้งหมด</button>
+        </div>
+        <div id="latest" class="newscontainer newstype">
+            <h2>ข่าวใหม่ล่าสุด</h2>
+            <div class="readmore"></div>
+        </div>
+              
+        <div id="trend" class="newscontainer newstype" style="display:none">
+            <h2>ข่าวยอดนิยม</h2>
+        </div>
+              
+        <div id="all" class="newscontainer newstype" style="display:none">
+            <h2>ข่าวทั้งหมด</h2>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="tagtype">
+            <h2>แท็ก</h2>
+                <h3>แท็กหนึ่ง</h3>
+                <h3>แท็กสอง</h3>
+                <h3>แท็กสาม</h3>
+                <h3>แท็กสี่</h3>
+        </div>
+        <div class="follow">
+            <h2>ติดตาม</h2>
+                <h3 id="twiiter">Twiiter</h3>
+                <h3 id="facebook">FB</h3>
+                <h3 id="youtube">Youtube</h3>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="homepage.js"></script>
+</body>
