@@ -1,23 +1,25 @@
 .header{
     position: relative;
     font-family: Mitr;
-    padding: 60px 0;
-    margin-top: -10px;
     background-color:  #F1F1F1;
-    height: 325px;
+    height: 352px;
     width: 100%;
 }
 img{
     display: block;
-    margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
       
+}
+body{
+    margin: 0;
+    padding: 0;
 }
     
 .header h2{
     position: relative;
-    top: -40px;
+    top: -45px;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -59,6 +61,7 @@ input[type=text], input[type=password]{
 input[type=submit]{
     position: relative;
     top: 125px;
+    left: 544px;
     bottom: 229px;
     width: 225px;
     height: 64px;

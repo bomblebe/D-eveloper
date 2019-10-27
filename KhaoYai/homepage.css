@@ -3,95 +3,296 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-}
-
-.loginbtn{
-    width: 50px;
-    top: 10px;
-    right: 1em;
+    background-color: #FFD55E;
+    height: 400px;
+    width: 100%;
     
 }
+body{
+    background-color: #F1F1F1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+.logo{
+    position: absolute;
+    align-self: flex-start;
+    left: 76px;
+    top: -10px;
+
+}
+
+.search{
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 52px;
+    right: 90px;
+
+}
+
+.close{
+    position: absolute;
+    left: 93%;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
+
+
 .navtab{
-    top: 20px;
-    right: 20px;
+    position: relative;
+    top: -60px;
+    right: 79px;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 .nav-item{
+    font-family: Mitr;
+    font-size: 36px;
     position: relative;
     display: inline-block;
     
 }
 .nav-link{
     display: block;
-    padding: 1em;
+    padding: 16px;
     text-decoration: none;
 }
-.slider{
-    position: relative;
-    display: flex;
-    justify-content: center;
+a{
+    color: #424242;
 }
-.sliderpic{
-    height: 300px;
+#slider{
+    width: 1224px;
+    height: 440px;
+    margin: 0;
 }
+
+.news1{
+    background: url(/img/placeholder/4k-wallpaper-afterglow-bird-s-eye-view-2093323.jpg);
+}
+.news2{
+    background: url(/img/placeholder/activity-adventure-back-view-2106776.jpg);
+}
+.news3{
+    background: url(/img/placeholder/architecture-bench-building-206673.jpg);  
+}
+.news4{
+    background: url(/img/placeholder/background-calm-clouds-747964.jpg);  
+}
+
 .interest{
+    font-family: Mitr;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
     position: relative;
+    top: -170px;
+    left: 108px;
+    color: #424242;
 
 }
-.interestcontainer{
-    position: static;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.boxContainer{
+    display: inline-block;
+    height: 472px;
 }
-.interestbox{
-    width: 300px;
-    border: 1px solid black;
+.box1{
+    position: relative;
+    margin: 0 72px 0 0;
+    background: url(/img/placeholder/4k-wallpaper-afterglow-bird-s-eye-view-2093323.jpg);
+}
+.box2{
+    position: relative;
+    margin: 0 72px 0 0;
+    background: url(/img/placeholder/activity-adventure-back-view-2106776.jpg);
+}
+.box3{
+    position: relative;
+    margin: 0 0 0 72px;
+    background: url(/img/placeholder/adult-beach-casual-736716.jpg);
+}
+.newsbox{
+
+    display: inline-block;
+    width: 360px;
+    height: 472px;
+    border-radius: 50px;
+    background-color: #FBFBFB;   
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    text-align: left;
+    box-shadow: 0px 10px 10px rgba(66, 66, 66, 0.7);
+}
+a{
+    text-decoration: none;
+}
+.tag{
+    position: relative;
+    top: 271px;
+    left: 20px;
     text-align: center;
-    margin: 10px;
+    font-family: Mitr;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FBFBFB;
+    background-color: #F98F0D;
+    height: 25px;
+    width: 148px;
+    border-radius: 5px;
 }
-.newspic{
-    display: block;
-  max-width:230px;
-  max-height:95px;
-  width: auto;
-  height: auto;
-  margin: auto;
+.desc{
+    position: relative;
+    top: 271px;;
+    padding: 21px;
+    text-decoration: none;
+    font-family: Chonburi;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 43px;
 }
 .tab{
     position: relative;
     top: 20px;
+    left: 76px;
+}
+
+.activeTab{
+    color: #F98F0D;
 }
 .newscontainer{
-    border: 5px solid black;
+    position: relative;
+    top: 31px;
+    width: 1298px;
+    height: 1099px;
+    background: #F1F1F1;
+}
+
+.tabcontainer .newsbtn{
+    position: relative;
+    font-family: Mitr;
+    font-size: 48px;
+    border-radius: 50px;
+    background: #F1F1F1;;
+    border: none;
+    color: #424242;
+}
+.newscontainer .newsbox{
+    position: relative;
+    width: 1224px;
+    height: 276px;
+    margin: 40px;
+}
+.newscontainer .newsbox1{
+    background: url(img/placeholder/4k-wallpaper-afterglow-bird-s-eye-view-2093323.jpg);
+}
+.newsbox .img{
+    position: absolute;
+    top: 40px;
+    left: 52px;
+    width: 306px;
+    height: 195px;
+    background-size: cover;
+}
+
+.newscontainer .tag{
+    top: 39px;
+    left: 410px;
+}
+.newscontainer .desc{
+    width: 772px;
+    height: 120px;
+    top: 27px;
+    left: 387.5px;
+}
+#readmore{
+    position: relative;
+    top: 53px;
+    left: 544px;
+    bottom: 229px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#readmore:hover{
+    background-color: #FFD55E;
+}
+.desc .tag{
+    position: relative;
+    top: 1px;
+    left: 0px;
+    background: #FBFBFB;
+    color: #F98F0D;
 }
 .footer{
+    width: 100%;
+    height: 431px; 
+    font-family: Mitr;
     position: relative;
-    top: 30px;
-    border: 5px solid black;
+    top: 238px;
+    background: #424242;
     display: grid;
     grid-template-areas: 
     "tag blank follow";
     grid-template-rows: repeat(3, 33.33%);
 
+
 }
+
 .tagtype{
     padding: 10px;
     grid-area: tag;
 }
+.footer h2{
+    color:#FFE18D;
+    margin: 47px 0 22px 108px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+}
+.footer h3{
+    color: #FBFBFB;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.tagtype h3{
+    margin: 25px 0 0 161px;
+}
+
 .follow{
     grid-area: follow;
 }
-#twiiter::before{
-    background-image: url(shorturl.at/pwEWY);
-    background-size: 10px 10px;
-    display: inline-block;
-    width: 10px; 
-    height: 20px;
-    content: "";
-    
+.follow h2{
+    position: relative;
+    left: 72px;
 }
-    
+.follow h3{
+    font-size: 30px;
+    left: 196px;
+    line-height: 0px;
+
+}
+
+.social h3{
+    position: static;
+    color: #F1F1F1;
+    font-size: 30px;
+    line-height: 47px;
+}
+
+.sIcon img{
+    margin: 47px;
+    display: block;
+    width: 50px;
+}

@@ -1,45 +1,90 @@
 
 <!doctype html>
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
     <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/slider-def.css">
     <title>"KhaoYai"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
 </head>
 
-<body style="zoom: 1;">
+<body>
     <div class="header">
-        <button class="loginbtn right">login</button>
+        <div class="logo">
+            <img src="img/Site Heading.png" alt="logo">
+        </div>
+        <img src="/img/search-orange.png" alt="searchicon" class="search">
         <div class="nav right">
             <ul class="navtab">
-                <li class="nav-item"><a class="nav-link active"href="#mainpage">หน้าหลัก</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about us">เกี่ยวกับเรา</a></li>
+                <li class="nav-item"><a class="nav-link active"href="homepage.html">หน้าหลัก</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html">เกี่ยวกับเรา</a></li>
             </ul>
         </div>  
     </div>
+    <div id="slider-wrapper">
+        <div class="inner-wrapper">
+            <input checked type="radio" name="slide" class="control" id="Slide1" />
+                <label for="Slide1" id="s1"></label>
+            <input type="radio" name="slide" class="control" id="Slide2" />
+                <label for="Slide2" id="s2"></label>
+            <input type="radio" name="slide" class="control" id="Slide3" />
+                <label for="Slide3" id="s3"></label>
+            <input type="radio" name="slide" class="control" id="Slide4" />
+                <label for="Slide4" id="s4"></label>
+            <div class="overflow-wrapper">
+                <a class="slide" href="">
+                    <div class="newsSlide news1">
+                        <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                        <div class="desc">ชื่อบทความ</div>
+                    </div>
+                </a>
+                <a class="slide" href="">
+                    <div class="newsSlide news2">
+                        <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                        <div class="desc">ชื่อบทความ</div>
+                    </div>
+                </a>
+                <a class="slide" href="">
+                        <div class="newsSlide news3">
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ</div>
+                        </div>
+                </a>
+                <a class="slide" href="">
+                        <div class="newsSlide news4">
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ</div>
+                        </div>
+                    </a>
 
-     
-    <div class="slider">
-        <img class="sliderpic" src="https://bit.ly/364KGcK" alt="">
+                
+            </div>
+            </div>
     </div>
+   
+
     <div class="interest">
-        <h2>ข่าวที่น่าสนใจ</h2>
-        <div class="interestcontainer">
+        <h2 style="font-weight: 500;">คุณอาจสนใจ</h2>
+        <div class="boxContainer">
             <a target="_blank" href="#interestnews1">
-                <div class="interestbox">
-                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
-                    <div class="desc">Add a description of the news here</div>
+                <div class="newsbox box1">
+                    <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                    <div class="desc">ชื่อบทความ</div>
                 </div>
             </a>
             <a target="_blank" href="#interestnews2">
-                <div class="interestbox">
-                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
-                    <div class="desc">Add a description of the news here</div>
+                <div class="newsbox box2">
+                    <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                    <div class="desc">ชื่อบทความอีกอย่าง</div>
                 </div>
             </a>
             <a target="_blank" href="#interestnews3">
-                <div class="interestbox">
-                    <img class="newspic" src="https://bit.ly/2PkKWyc" alt="newspic" width="600" height="400">
-                    <div class="desc">Add a description of the news here</div>
+                <div class="newsbox box3">
+                    <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                    <div class="desc">ชื่อบทความอีกอย่างที่ยาวกว่า</div>
                 </div>
             </a>
         </div>
@@ -47,38 +92,153 @@
     </div>
     <div class="tab">
         <div class="tabcontainer">
-            <button class="newstab newsbtn" onclick="openNews('latest')">#ข่าวใหม่ล่าสุด</button>
-            <button class="newstab newsbtn" onclick="openNews('trend')">ช่าวยอดนิยม</button>
-            <button class="newstab newsbtn" onclick="openNews('all')">ข่าวทั้งหมด</button>
+            <button class="newstab newsbtn latest activeTab" onclick="openNews('latest')">#ข่าวใหม่ล่าสุด</button>
+            <button class="newstab newsbtn trend activeTab " onclick="openNews('trend')">ข่าวยอดนิยม</button>
+            <button class="newstab newsbtn all activeTab" onclick="openNews('all')">ข่าวทั้งหมด</button>
         </div>
         <div id="latest" class="newscontainer newstype">
-            <h2>ข่าวใหม่ล่าสุด</h2>
-            <div class="readmore"></div>
+            <div class="newsbox">
+                <div class="img" class="newsbox1"></div>
+                <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                    <div>
+                    <span class="tag reverse">#tag1</span>
+                    <span class="tag reverse">#tag2</span>
+                    <span class="tag reverse">#tag3</span>
+                    <span class="tag reverse">#tag4</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="newsbox">
+                    <div class="img" class="newsbox2"></div>
+                    <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                    <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                        <div>
+                        <span class="tag reverse">#tag1</span>
+                        <span class="tag reverse">#tag2</span>
+                        <span class="tag reverse">#tag3</span>
+                        <span class="tag reverse">#tag4</span>
+                        </div>
+                    </div> 
+            </div>
+            <div class="newsbox">
+                    <div class="img" class="newsbox3"></div>
+                    <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                    <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                        <div>
+                        <span class="tag reverse">#tag1</span>
+                        <span class="tag reverse">#tag2</span>
+                        <span class="tag reverse">#tag3</span>
+                        <span class="tag reverse">#tag4</span>
+                        </div>
+                    </div> 
+            </div>
+            <button onclick="" id="readmore"> เพิ่มเติม</button>
         </div>
               
         <div id="trend" class="newscontainer newstype" style="display:none">
-            <h2>ข่าวยอดนิยม</h2>
+                <div class="newsbox">
+                        <div class="img" class="newsbox1"></div>
+                        <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                        <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                            <div>
+                            <span class="tag reverse">#tag1</span>
+                            <span class="tag reverse">#tag2</span>
+                            <span class="tag reverse">#tag3</span>
+                            <span class="tag reverse">#tag4</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="newsbox">
+                            <div class="img" class="newsbox2"></div>
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                                <div>
+                                <span class="tag reverse">#tag1</span>
+                                <span class="tag reverse">#tag2</span>
+                                <span class="tag reverse">#tag3</span>
+                                <span class="tag reverse">#tag4</span>
+                                </div>
+                            </div> 
+                    </div>
+                    <div class="newsbox">
+                            <div class="img" class="newsbox3"></div>
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                                <div>
+                                <span class="tag reverse">#tag1</span>
+                                <span class="tag reverse">#tag2</span>
+                                <span class="tag reverse">#tag3</span>
+                                <span class="tag reverse">#tag4</span>
+                                </div>
+                            </div> 
+                    </div>
+                    <button onclick="" id="readmore"> เพิ่มเติม</button>
+                </div>
         </div>
-              
         <div id="all" class="newscontainer newstype" style="display:none">
-            <h2>ข่าวทั้งหมด</h2>
+                <div class="newsbox">
+                        <div class="img" class="newsbox1"></div>
+                        <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                        <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                            <div>
+                            <span class="tag reverse">#tag1</span>
+                            <span class="tag reverse">#tag2</span>
+                            <span class="tag reverse">#tag3</span>
+                            <span class="tag reverse">#tag4</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="newsbox">
+                            <div class="img" class="newsbox2"></div>
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                                <div>
+                                <span class="tag reverse">#tag1</span>
+                                <span class="tag reverse">#tag2</span>
+                                <span class="tag reverse">#tag3</span>
+                                <span class="tag reverse">#tag4</span>
+                                </div>
+                            </div> 
+                    </div>
+                    <div class="newsbox">
+                            <div class="img" class="newsbox3"></div>
+                            <div class="tag">#ข่าวประเภทหนึ่ง</div>
+                            <div class="desc">ชื่อบทความ ฟหกด่าสว ฟหกด่าสว
+                                <div>
+                                <span class="tag reverse">#tag1</span>
+                                <span class="tag reverse">#tag2</span>
+                                <span class="tag reverse">#tag3</span>
+                                <span class="tag reverse">#tag4</span>
+                                </div>
+                            </div> 
+                    </div>
+                    <button onclick="" id="readmore"> เพิ่มเติม</button>
+                </div>
         </div>
-    </div>
     <div class="footer">
         <div class="tagtype">
             <h2>แท็ก</h2>
-                <h3>แท็กหนึ่ง</h3>
-                <h3>แท็กสอง</h3>
-                <h3>แท็กสาม</h3>
-                <h3>แท็กสี่</h3>
+                <a href="#tag1"><h3>แท็กหนึ่ง</h3></a>
+                <a href="#tag2"><h3>แท็กสอง</h3></a>
+                <a href="#tag3"><h3>แท็กสาม</h3></a>
+                <a href="#tag4"><h3>แท็กสี่</h3></a>
+            
         </div>
         <div class="follow">
             <h2>ติดตาม</h2>
-                <h3 id="twiiter">Twiiter</h3>
-                <h3 id="facebook">FB</h3>
-                <h3 id="youtube">Youtube</h3>
+                <span class="sIcon">
+                    <img src="/img/Icons/008-twitter.png" alt="">
+                    <img src="/img/Icons/036-facebook.png" alt="">
+                    <img src="/img/Icons/001-youtube.png" alt="">
+                </span>
+                <span class="social">
+                    <a href="#twitter"><h3>Twitter</h3></a>
+                    <a href="#facebook"><h3>FB</h3></a>
+                    <a href="#youtube"><h3>Youtube</h3></a>
+                </span>
+                
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="homepage.js"></script>
 </body>
