@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moderator</title>
+    <link href="moderator.css" type="text/css" rel="stylesheet">
+    <script src="moderator.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="head">
+            <img src="beautiful-beauty-blurred-background-1239291.jpg" alt="adminimage" width="100" height="70">
+            <a href="#">
+                <h3>ออกจากระบบ</h3>
+            </a>
+        </div>
+    </nav>
+    <ul class="tabs">
+        <li data-tab-target="#home" class="active tab">ตั้งค่าหน้าเว็ป</li>
+        <li data-tab-target="#pricing" class="tab">จัดการโพสต์</li>
+        <li data-tab-target="#about" class="tab">จัดการโพสต์</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" data-tab-content class="active">
+            <h1>ตั้งค่าหน้าเว็ป</h1>
+
+        </div>
+        <div id="pricing" data-tab-content>
+            <h1>แอดมินเว็บ</h1>
+
+        </div>
+        <div class="post" id="about" data-tab-content>
+            <h1>จัดการโพสต์</h1>
+            <a href="#"><h2>เผยแพร่</h2></a>
+            <form>
+                <input type="text" id="nameblog" placeholder="ชื่อบทความ"></form>
+            <textarea name="messaage" placeholder="Write...!"></textarea>
+            <br>แท็ก: <input type="tag" name="tag">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
