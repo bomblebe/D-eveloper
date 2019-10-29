@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://unpkg.com/vue2-editor@2.3.11/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="admindashboard.css">
+    <link rel="stylesheet" href="popupcontent.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <title>"KhaoYai"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar">
+                <header>
+                    <img src="/img/placeholder/attractive-beautiful-beauty-1845534.jpg" class="adminpics" alt="">
+                    <div class="info">
+                    <a href="#">
+                      <div id="adminName">Name Surname</div><br>
+                    </a>
+                    <a href="adminlogin.html">
+                      <div id="logout">ออกจากระบบ</div>
+                    </a>
+                </div>
+                </header>
+                <ul class="nav">
+                  <li>
+                    <a href="webSetting.html">
+                      <i class="zmdi zmdi-view-dashboard"></i>
+                      <div class="navBut">
+                            ตั้งค่าหน้าเว็บ
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="admindashboard.html">
+                      <i class="zmdi zmdi-link"></i> <div class="navBut">
+                            แอดมินเว็บ
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="modwrite.html">
+                      <i class="zmdi zmdi-widgets"></i> <div class="navBut">
+                            จัดการโพสต์
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+  </div>
+  <div id="content">
+        <div class="content-header">
+                    <h1>แอดมินเว็บ</h1>
+                    <button @click="ishidden=false" id="addmin">เพิ่มแอดมิน</button>
+                    <div class="overlay" v-if="!ishidden"></div>
+                    <div class="addAdmin" v-if="!ishidden">
+                            <div class="topic">
+                                <button @click="ishidden=true" type="button" class="xButton">+</button>
+                                <h1>กรอกอีเมลของแอดมินใหม่</h1>
+                            </div>
+                            <div class="emailContainer">
+                            <form action="" class="addAdminEmail">
+                                <label for="email"><h2>Email</h2></label>
+                                <input type="text" placeholder="Type here...">
+                            </form>
+                            </div>
+                            <div class="description">
+                                <h2>แอดมินคนใหม่จะได้รับรหัสผ่าน <br>และขั้นตอนการตั้งรหัสผ่านใหม่ ผ่านทางอีเมล</h2>
+                            </div>
+                        <div class="addAdminSubmit">
+                            <button type="button" id="sendEmail">ส่ง</button>
+                        </div>
+            
+                    </div>
+        </div>
+        <div class="adminCardContainer">
+          <div class="admincard" id="admin1">
+              <div class="overlay" v-if="showEdit||showDelete"></div>
+              <div class="editAdmin" v-if="showEdit">
+                  <div class="topic">
+                      <button type="button" class="xButton" @click="showEdit=false" >+</button>
+                          <h1>แก้ไขข้อมูลแอดมิน</h1>
+                  </div>
+                  <div class="editInput">
+                  <form action="">
+                  <div class="userName inputField">
+                      <h2>ชื่อผู้ใช้</h2>
+                      <input type="text" :value="adminName">
+                  </div>
+                  <div class="newPassword inputField ">
+                      <h2>รหัสผ่านใหม่</h2>
+                      <input type="password" value="" placeholder="****">
+                  </div>
+                  <div class="rnewPassword inputField ">
+                      <h2>ยืนยันรหัสผ่านใหม่</h2>
+                      <input type="password" value="" placeholder="****">
+                  </div>
+                  <div class="oldPassword">
+                      <h2>กรอกรหัสผ่านเดิมเพื่อยืนยันการแก้ไข</h2>
+                      <input type="password" value="" placeholder="****">
+                  </div>
+                  <div class="buttonEdit">
+                          <button @click="showEdit=false" id="cancel">ยกเลิก</button>
+                          <button id="submit">ส่ง</button>
+                      </div>
+                  </form>
+              </div>
+      
+              </div>
+              <div class="adminDelete" v-if="showDelete">
+                <div class="topic">
+                    <button type="button"class="xButton" @click="showDelete=false" >+</button>
+                    <h1>ลบ {{adminName}} จากแอดมิน</h1>
+                </div>
+                <div class="textDelete">
+                    <h2>การลบไม่สามารถย้อนกลับได้</h2>
+                    <h3>* โพสต์ของ {{adminName}} บนหน้าเว็บจะไม่ถูกลบ</h3>
+                </div>
+                <div class="buttonDelete">
+                    <button onclick="" id="cancel" @click="showDelete=false">ยกเลิก</button>
+                    <button id="delete">ลบ</button>
+                </div>
+              </div>
+
+
+              <div class="edit">
+                <button class="edit-container" @click="showEdit=true">
+                  <img src="/img/Icons/edit-black.png" alt="">
+                </button>   
+                <button class="edit-container" @click="showDelete=true">
+                  <img src="/img/Icons/delete-black.png" alt="">
+                </button> 
+              </div>
+                    <div class="head">
+                        <img src="img/placeholder/attractive-beautiful-beauty-1845534.jpg" class="adminpics" alt="">
+                        <div class="info">
+                          <div id="adminName">{{adminName}}</div><br>
+                          <div id="adminMail">{{adminMail}}</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="postNumber">
+                        <p>{{postNumber}}</p>
+                        </div>
+                        <span>โพสต์</span>
+                    </div>
+          </div>
+          <div class="admincard" id="admin2">
+            <div class="overlay" v-if="showEdit||showDelete"></div>
+            <div class="editAdmin" v-if="showEdit">
+                <div class="topic">
+                    <button type="button" class="xButton" @click="showEdit=false" >+</button>
+                        <h1>แก้ไขข้อมูลแอดมิน</h1>
+                </div>
+                <div class="editInput">
+                <form action="">
+                <div class="userName inputField">
+                    <h2>ชื่อผู้ใช้</h2>
+                    <input type="text" :value="adminName">
+                </div>
+                <div class="newPassword inputField ">
+                    <h2>รหัสผ่านใหม่</h2>
+                    <input type="password" value="" placeholder="****">
+                </div>
+                <div class="rnewPassword inputField ">
+                    <h2>ยืนยันรหัสผ่านใหม่</h2>
+                    <input type="password" value="" placeholder="****">
+                </div>
+                <div class="oldPassword">
+                    <h2>กรอกรหัสผ่านเดิมเพื่อยืนยันการแก้ไข</h2>
+                    <input type="password" value="" placeholder="****">
+                </div>
+                <div class="buttonEdit">
+                        <button @click="showEdit=false" id="cancel">ยกเลิก</button>
+                        <button id="submit">ส่ง</button>
+                    </div>
+                </form>
+            </div>
+    
+            </div>
+            <div class="adminDelete" v-if="showDelete">
+              <div class="topic">
+                  <button type="button"class="xButton" @click="showDelete=false" >+</button>
+                  <h1>ลบ {{adminName}} จากแอดมิน</h1>
+              </div>
+              <div class="textDelete">
+                  <h2>การลบไม่สามารถย้อนกลับได้</h2>
+                  <h3>* โพสต์ของ {{adminName}} บนหน้าเว็บจะไม่ถูกลบ</h3>
+              </div>
+              <div class="buttonDelete">
+                  <button onclick="" id="cancel" @click="showDelete=false">ยกเลิก</button>
+                  <button id="delete">ลบ</button>
+              </div>
+            </div>
+
+
+            <div class="edit">
+              <button class="edit-container" @click="showEdit=true">
+                <img src="/img/Icons/edit-black.png" alt="">
+              </button>   
+              <button class="edit-container" @click="showDelete=true">
+                <img src="/img/Icons/delete-black.png" alt="">
+              </button> 
+            </div>
+                  <div class="head">
+                      <img src="img/placeholder/attractive-beautiful-beauty-1845534.jpg" class="adminpics" alt="">
+                      <div class="info">
+                        <div id="adminName">{{adminName}}</div><br>
+                        <div id="adminMail">{{adminMail}}</div>
+                      </div>
+                  </div>
+                  <div class="foot">
+                      <div class="postNumber">
+                      <p>{{postNumber}}</p>
+                      </div>
+                      <span>โพสต์</span>
+                  </div>
+        </div>
+        </div> 
+  </div>    
+    
+    <script src="admindashboard.js"></script>
+</body>
+</html>

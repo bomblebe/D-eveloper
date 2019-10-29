@@ -1,0 +1,46 @@
+<div class="login">
+        <button class="loginbtn" v-on:click="seen = true">login</button>
+        <div v-if="seen" id="popup">
+            <div class="overlay"></div>
+            <div class="popup"> 
+                <div class="popupcontent">
+                    <div class="close" v-on:click="seen = false">+</div>
+                        <h2>login</h2>
+                        <form action="get">
+                            username<input type="text" placeholder="username" required>
+                            password<input type="text" placeholder="password"  required>  
+                            <a href="#signup"><button>สมัครสมาชิก</button></a> 
+                            <a href="#login"><button>เข้าสู่ระบบ</button></a> 
+                        </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+    .popup{
+    position: fixed;
+    top: auto;
+    right: 50%;
+    height: 500px;
+    width: 250px;
+    border-color: black;
+    background-color: white;
+    z-index: 5;
+}
+.popupcontent{
+    padding: 10px;
+}
+.overlay{
+    position: fixed;
+    width: 100%; 
+    height: 100%;
+	top: 0;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+	transition: opacity 200ms;
+    z-index: 4;
+}</script>

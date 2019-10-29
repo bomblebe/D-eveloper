@@ -1,0 +1,598 @@
+/* adminDelete*/
+.adminDelete{
+    position: fixed;
+    width: 848px;
+    height: 432px;
+    background: #FBFBFB;
+    border-radius: 50px;
+    z-index: 9999;
+}
+
+.adminDelete .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+}
+.adminDelete .topic{
+    font-size: 48px;
+}
+.adminDelete h1{
+    position: relative;
+    top: 60px;
+}
+.topic{
+    height: 150px;
+    background: #F1F1F1;
+    border-radius: 50px 50px 0 0;
+    font-family: Mitr;
+    color: #424242;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+}
+.topic h1{
+  position: relative;
+  margin: auto;
+}
+
+.textDelete{
+    width: 668px;
+    height: 152px;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.textDelete h2{
+    transform: translateY(30px);
+    color: #424242;
+}
+.textDelete h3{
+    transform: translateY(30px);
+    color: #F98F0D;
+}   
+.buttonDelete{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+#delete{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#cancel{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F1F1F1;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #656565;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 80px 0 0;
+}
+#cancel:hover{
+    color: #656565;
+    background-color:#FFD55E;
+}
+
+/* addAdmin*/
+
+.addAdmin{
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    margin: auto;
+    width: 848px;
+    height: 848px;
+    background: #FBFBFB;
+    border-radius: 50px;
+    z-index: 9999;
+    
+}
+
+.addAdmin .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+
+.addAdmin .topic{
+    position: absolute;
+    width: 848px;
+    height: 224px;
+    font-family: Mitr;
+    text-align: center;
+}
+.addAdmin .topic h1{
+    position: relative;
+    top: 100px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: normal;
+}
+  
+.emailContainer{
+    position: relative;
+    top: 331px;
+}
+.addAdminEmail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Sarabun;
+    font-size: 36px;
+    color: #424242;
+    
+}
+
+.addAdminEmail input{
+    width: 372px;
+    height: 59px;
+    font-size: 36px;
+    font-family: Sarabun;
+    color: #424242;
+    box-shadow: 0px 0px 20px #A0A0A0;
+    border-radius: 50px;
+    padding: 0 32px;
+    margin: 0 0 0 60px;
+}
+
+.addAdmin .description{
+    width: 848px;
+    height: 146px;
+    position: relative;
+    top: 376px;
+    font-size: 36px;
+    font-family: Sarabun;
+    color: #424242;
+    text-align: center;
+}
+.addAdminSubmit{
+    text-align: center;
+}
+
+.addAdminSubmit #sendEmail{
+    position: relative;
+    top: 396px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.addAdminSubmit #sendEmail:hover{
+    background-color: #FFD55E;
+   
+}
+
+/*edit Admin*/
+.editAdmin{
+    position: fixed;
+    width: 848px;
+    height: 997px;
+    background: #FBFBFB;
+    border-radius: 50px;
+    z-index: 9999;
+    margin: auto;
+}
+
+.editAdmin .topic h1{
+    display: inline-block;
+    position: relative;
+    top: 42px;
+    margin: auto;
+    font-family: Mitr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 70px;
+}
+.editAdmin .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    z-index: 5;
+}
+.editAdmin .inputField, .oldPassword{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    color: #424242;
+}
+
+.inputField input{
+    width: 372px;
+    height: 59px;
+    padding: 0 36px;
+    font-family: Sarabun;
+    font-size: 36px;
+    border-radius: 50px;
+    margin: 0 60px 0 50px;
+    box-shadow: 0px 0px 20px #A0A0A0;
+}
+.userName{
+    top: 80px;
+}
+.newPassword{
+    top: 179px;
+}
+.rnewPassword{
+    top: 215px;
+}
+.oldPassword{
+    display: block;
+    position: relative;
+    top: 275px;
+    text-align: center;
+}
+
+.oldPassword input{
+    width: 620px;
+    height: 59px;
+    padding: 0 36px;
+    font-family: Sarabun;
+    font-size: 36px;
+    border-radius: 50px;
+    margin: 10px 0 0 0;
+    box-shadow: 0px 0px 20px #A0A0A0;
+}
+.buttonEdit{
+    position: relative;
+    text-align: center;
+    top: 332px;
+}
+.editAdmin #cancel{
+    color: #FBFBFB;
+    background-color: #C2C2C2;
+    margin: 0 65px 0 0;
+}
+.editAdmin #cancel:hover{
+    color: #FBFBFB;
+    background-color: #F98F0D;
+    margin: 0 65px 0 0;
+}
+.editAdmin #submit{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.editAdmin #submit:hover{
+    background-color: #FFD55E;
+    color: #FBFBFB;
+  
+/* post Delete*/
+.postDelete{
+    position: relative;
+    width: 848px;
+    height: 432px;
+    background: #FBFBFB;
+    border-radius: 50px;
+}
+
+.postDelete .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+}
+.postDelete .topic{
+    font-size: 48px;
+}
+.postDelete .topic{
+    height: 150px;
+    background: #F1F1F1;
+    border-radius: 50px 50px 0 0;
+    font-family: Mitr;
+    color: #424242;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+}
+.topic h1{
+  position: relative;
+  top: 50px;
+}
+
+.postDelete .textDelete{
+    width: 668px;
+    height: 152px;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.postDelete .textDelete h2{
+    transform: translateY(47px);
+    color: #424242;
+}
+
+.postDelete .buttonDelete{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.postDelete #delete{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.postDelete #cancel{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F1F1F1;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #656565;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 80px 0 0;
+}
+/*post Unpin*/
+.postUnpin{
+    position: relative;
+    width: 848px;
+    height: 432px;
+    background: #FBFBFB;
+    border-radius: 50px;
+    
+}
+
+.postUnpin .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+}
+.postUnpin .topic{
+    font-size: 48px;
+}
+.postUnpin .topic{
+    height: 150px;
+    background: #F1F1F1;
+    border-radius: 50px 50px 0 0;
+    font-family: Mitr;
+    color: #424242;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+}
+.topic h1{
+  position: relative;
+  top: 50px;
+}
+
+.postUnpin .textDelete{
+    width: 668px;
+    height: 152px;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.postUnpin .textDelete h2{
+    transform: translateY(47px);
+    color: #424242;
+}
+
+.postUnpin .buttonDelete{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.postUnpin #delete{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.postUnpin #cancel{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F1F1F1;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #656565;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 80px 0 0;
+}
+
+/*urlDelete*/
+.urlDelete{
+    position: relative;
+    width: 848px;
+    height: 432px;
+    background: #FBFBFB;
+    border-radius: 50px;
+    
+}
+
+.urlDelete .xButton{
+    position: absolute;
+    left: 792px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #424242;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+}
+.urlDelete .topic{
+    font-size: 48px;
+}
+.urlDelete .topic{
+    height: 150px;
+    background: #F1F1F1;
+    border-radius: 50px 50px 0 0;
+    font-family: Mitr;
+    color: #424242;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+}
+.urlDelete h1{
+  position: relative;
+  top: 50px;
+}
+
+.urlDelete .textDelete{
+    width: 668px;
+    height: 152px;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.urlDelete .textDelete h2{
+    transform: translateY(47px);
+    color: #424242;
+}
+
+.urlDelete .buttonDelete{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.urlDelete #delete{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.urlDelete #cancel{
+    position: relative;
+    top: 18px;
+    width: 225px;
+    height: 64px;
+    background-color: #F1F1F1;
+    font-family: Mitr;
+    font-size: 36px;
+    color: #656565;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 80px 0 0;
+}

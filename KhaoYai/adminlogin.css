@@ -41,6 +41,7 @@ body{
 label{ 
     width: 192px; 
     display: inline-block;
+    cursor: auto;
 }
 
 
@@ -61,7 +62,6 @@ input[type=text], input[type=password]{
 input[type=submit]{
     position: relative;
     top: 125px;
-    left: 544px;
     bottom: 229px;
     width: 225px;
     height: 64px;
@@ -79,12 +79,15 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: #FFD55E;
 }
-.footer{
+.footer h2, .footer h3{
     position: relative;
-    margin-top: 325px;
+    top: 320px;
     color: #AAAAAA;
     text-align: center;
     font-family: Mitr;
     font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 15px;
 }
 

@@ -1,0 +1,90 @@
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 381px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #FBFBFB;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .adminpics{
+      position: relative;
+      right: 22px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  }
+  
+  #adminName{
+      position: relative;
+      text-align: left;
+      font-family: Mitr;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 38px;
+      color: #424242;
+  }
+  
+  #logout{
+      text-align: left;
+      font-family: Sarabun;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      color: #F98F0D;
+  }
+  
+  #sidebar header {
+      margin: 62px 0 82px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #FBFBFB;
+      font-size: 20px;
+      line-height: 0px;
+      text-align: center;
+  }
+  
+  #sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+  }
+  
+  #sidebar header a:hover {
+    color: #fff;
+  }
+  
+  #sidebar .nav a{
+      position: relative;
+      font-family: Mitr;
+      color: #424242;    ;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 57px;
+      
+  }
+  
+  .navBut{
+      height: 50px;
+      padding: 0 0 0 42px;
+  }
+  
+  #sidebar .nav a:hover{
+    background: none;
+    color: #F98F0D;
+  }
+  
+  #sidebar .nav a i{
+    margin-right: 16px;
+  }
