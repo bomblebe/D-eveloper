@@ -67,20 +67,20 @@ a{
 }
 
 .postPin{
+    position: relative;
     display: grid;
     grid-template-rows: 100px auto;
     grid-template-areas: "head" 
     "postpin";
     position: relative;
-    margin: 107px auto 33px auto;
+    margin: 107px auto 0 auto;
     width: 962px;
     height: 491px;
     background-color: #FBFBFB;
     border-radius: 10px;
 }
 
-.postPin h2{
-    grid-area: head;
+.postPin h2, .footerSet h2, .manageTag h2, .webDescription h2{
     font-family: Mitr;
     font-style: normal;
     font-weight: normal;
@@ -97,6 +97,7 @@ a{
     height: 44px;
     background-color: #656565;
     border-radius: 10px;
+    margin: 0 21px 0 47px;
 }
 
 .postOnSlide h1{
@@ -107,4 +108,192 @@ a{
     font-weight: normal;
     font-size: 26px;
     line-height: 34px;
+}
+#minus{
+    height: 44px;
+    width: 44px;
+    background-color: #FFB99B;
+    color: #424242;
+    border: none;
+    border-radius: 50%;
+}
+#minus p{
+    transform: scaleX(5.5) translateY(2px);
+}
+
+#post1{
+    display: flex;
+    flex-direction: row;
+}
+.footerSet{
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-areas: "footerHead" 
+    "field";
+    position: relative;
+    margin: 47px auto 33px auto;
+    width: 962px;
+    height: 377px;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+}
+.footerSet form{
+    position: relative;
+    top: 10px;
+}
+.inputContainer{
+    width: 442px;
+    height: 44px;
+    background: #FBFBFB;
+    box-shadow: 0px 0px 20px #A0A0A0;
+    border-radius: 10px;
+    margin: 14px 15px 5px 30px;
+
+}
+.inputContainer input{
+    background: #FBFBFB;
+    font-family: Sarabun;
+    font-size: 24px;
+    height: 31px;
+    width: 370px;
+    border: none;
+
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.socialIcon{
+    height: 30px;
+    margin: 11px;
+}
+
+#deleteUrl{
+    background: #C2C2C2;
+    background-image: url(/img/Icons/delete-black.png) ;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+}
+#deleteUrl:hover{
+    background: #F98F0D;
+    background-image: url(/img/Icons/delete-white.png) ;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#addUrl{
+    background: #F98F0D;
+    color: #FBFBFB;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+}
+#addUrl:hover{
+    background: #FFD55E;
+    color: #FBFBFB;
+}
+.url{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footerSet textarea{
+    font-family: Sarabun;
+    width: 382px;
+    height: 162px;
+    font-size: 16px;
+    background: #FBFBFB;
+    box-shadow: 0px 0px 20px #A0A0A0;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 547px;
+}
+.footerSet #save{
+    left: 851px;
+}
+
+#save{
+    position: absolute;
+    bottom: 10px;
+    width: 80px;
+    height: 31px;
+    background-color: #F98F0D;
+    font-family: Mitr;
+    font-size: 18px;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#save:hover{
+    background-color: #FFD55E;
+   
+}
+.lowest{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.manageTag{
+    width: 452px;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    margin: 0 47px 0 0;
+}
+.webDescription{
+    width: 463px;
+    height: 394px;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+}
+.webDescription textarea{
+    font-family: Sarabun;
+    width: 382px;
+    height: 162px;
+    font-size: 16px;
+    background: #FBFBFB;
+    box-shadow: 0px 0px 20px #A0A0A0;
+    border-radius: 10px;
+    position: relative;
+    left: 25px;
+}
+.webDescription #save{
+    position: relative;
+    left: 332px;
+    top: 21px;
+}
+
+.tag{
+    display: flex;
+    margin: 0 24px 25px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.tag input[type="text"]{
+    margin: 0 17px 0 0;
+    background: #FFFFFF;
+    font-family: Sarabun;
+    font-size: 24px;
+    border-radius: 10px;
+    width: 127px;
+    height: 44px
+    
+}
+.tagContainer{
+    margin: 0 17px 0 0;
+    width: 127px;
+    height: 44px
+    
 }

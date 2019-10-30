@@ -96,22 +96,25 @@ a{
 }
 
 .boxContainer{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     height: 472px;
 }
 .box1{
     position: relative;
-    margin: 0 72px 0 0;
+    margin: 0 72px;
     background: url(/img/placeholder/4k-wallpaper-afterglow-bird-s-eye-view-2093323.jpg);
 }
 .box2{
     position: relative;
-    margin: 0 72px 0 0;
+    margin: 0 72px;
     background: url(/img/placeholder/activity-adventure-back-view-2106776.jpg);
 }
 .box3{
     position: relative;
-    margin: 0 0 0 72px;
+    margin: 0 72px;
     background: url(/img/placeholder/adult-beach-casual-736716.jpg);
 }
 .newsbox{
@@ -155,8 +158,9 @@ a{
 }
 .tab{
     position: relative;
-    top: 20px;
-    left: 76px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .activeTab{
@@ -234,7 +238,7 @@ a{
 }
 .footer{
     width: 100%;
-    height: 431px; 
+    height: 500px; 
     font-family: Mitr;
     position: relative;
     top: 238px;
@@ -243,7 +247,6 @@ a{
     grid-template-areas: 
     "tag blank follow";
     grid-template-rows: repeat(3, 33.33%);
-
 
 }
 
@@ -279,20 +282,30 @@ a{
 }
 .follow h3{
     font-size: 30px;
-    left: 196px;
     line-height: 0px;
 
 }
+.sIcon{
+    position: relative;
+}
 
-.social h3{
-    position: static;
+.sIcon h3{
     color: #F1F1F1;
     font-size: 30px;
     line-height: 47px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .sIcon img{
-    margin: 47px;
-    display: block;
     width: 50px;
+    margin: 0 20px;
+}
+.linkContainer{
+    position: relative;
+    left: 100px;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

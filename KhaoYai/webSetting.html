@@ -56,18 +56,88 @@
     <div class="content-header">
       <h1>ตั้งค่าหน้าเว็บ</h1>
       <a href="homepage.html"><div id="toMainPage"><p>ไปที่เว็บไซต์</p></div></a>
-  </div>    
-  <div class="postPin">
+    </div>    
+    <div class="postPin">
     <h2>โพสต์ปักหมุด <span style="font-size: 24px; font-family: Sarabun">จะแสดงผลที่ Slideshow ที่บนสุดของหน้าหลักของเว็บ<span></h2>
-    <div class="postSlide" id="post1">
+    <div class="postSlide">
+      <div id="post1">
       <div class="postOnSlide">
         <h1>{{postName}}</h1>
       </div>
       <div class="deletePostFromSlide">
-        
+        <button id="minus"><p>-</p></button>
       </div>
     </div>
+    </div>
+    </div>
+    <div class="footerSet">
+      <h2>ตั้งค่า Footer<br>
+      <span style="font-size: 24px; font-family: Sarabun">Social Media<span> 
+      <span style="font-size: 24px; font-family: Sarabun; margin:0 0 0 385px;">Copyright Text<span> 
+      </h2>
+      <form>
+      <div class="youtube url">
+        <div class="inputContainer">
+          <img src="/img/Icons/001-youtube.png" class="socialIcon">
+          <input type="text">
+        </div>
+        <button id="deleteUrl"></button>
+      </div>
+      <div class="facebook url">
+        <div class="inputContainer">
+          <img src="/img/Icons/036-facebook.png" class="socialIcon">
+          <input type="text">
+        </div>
+        <button id="deleteUrl"></button>
+      </div>
+      <div class="twitter url">
+        <div class="inputContainer">
+            <img src="/img/Icons/008-twitter.png" class="socialIcon">
+            <input type="text">
+        </div>
+        <button id="deleteUrl"></button>
+      </div>
+      <div class="other url">
+        <div class="inputContainer">
+            <input type="text" style="margin: 0 0 0 17px ;">
+        </div>
+        <button id="addUrl">+</button>
+      </div>
+      <textarea name="copyRightText" id="" cols="30" rows="10">
+      </textarea>
+      <button type="button" id="save">บันทึก</button>
+      </form>
+
+    </div>
+    <div class="lowest">
+  <div class="manageTag">
+      <h2>จัดการแท็ก</h2>
+          <div class="tag" id="tag1">
+              <div class="tagContainer">
+                <h2>{{tag1}}</h2>
+              </div>
+              <button id="deleteUrl"></button>
+          </div>
+          <div class="tag" id="addTag">
+              <div class="tagContainer">
+                <input type="text">
+              </div>
+              <button id="addUrl">+</button>
+          </div>
+  
   </div>
+  <div class="webDescription">
+      <h2>คำอธิบายเว็บ <br>
+        <span style="font-size: 24px; font-family: Sarabun">จะแสดงผลที่หน้า "เกี่ยวกับเรา"<span>
+      </h2>
+      <form action="">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button type="button" id="save">บันทึก</button>
+    </form>
+
+  </div>
+    </div>
+</div>
     
     <script src="webSetting.js"></script>
 </body>

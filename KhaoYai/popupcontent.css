@@ -103,9 +103,7 @@
 /* addAdmin*/
 
 .addAdmin{
-    position: fixed;
-    top: 10%;
-    left: 30%;
+    position: absolute;
     margin: auto;
     width: 848px;
     height: 848px;
@@ -138,11 +136,11 @@
     width: 848px;
     height: 224px;
     font-family: Mitr;
-    text-align: center;
 }
 .addAdmin .topic h1{
-    position: relative;
+    position: absolute;
     top: 100px;
+    left: 70px;
     font-size: 64px;
     font-style: normal;
     font-weight: normal;
@@ -208,7 +206,7 @@
 
 /*edit Admin*/
 .editAdmin{
-    position: fixed;
+    position: absolute;
     width: 848px;
     height: 997px;
     background: #FBFBFB;
@@ -329,10 +327,10 @@
 /* post Delete*/
 .postDelete{
     position: relative;
-    width: 848px;
-    height: 432px;
     background: #FBFBFB;
     border-radius: 50px;
+    width: 848px;
+    height: 432px;
 }
 
 .postDelete .xButton{

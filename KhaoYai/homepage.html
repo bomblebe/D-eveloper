@@ -91,6 +91,7 @@
         </div>
     </div>
     <div class="tab">
+        <div class="allTab">
         <div class="tabcontainer">
             <button class="newstab newsbtn latest activeTab" onclick="openNews('latest')">#ข่าวใหม่ล่าสุด</button>
             <button class="newstab newsbtn trend activeTab " onclick="openNews('trend')">ข่าวยอดนิยม</button>
@@ -134,8 +135,7 @@
                     </div> 
             </div>
             <button onclick="" id="readmore"> เพิ่มเติม</button>
-        </div>
-              
+        </div>   
         <div id="trend" class="newscontainer newstype" style="display:none">
                 <div class="newsbox">
                         <div class="img" class="newsbox1"></div>
@@ -174,7 +174,6 @@
                             </div> 
                     </div>
                     <button onclick="" id="readmore"> เพิ่มเติม</button>
-                </div>
         </div>
         <div id="all" class="newscontainer newstype" style="display:none">
                 <div class="newsbox">
@@ -214,8 +213,9 @@
                             </div> 
                     </div>
                     <button onclick="" id="readmore"> เพิ่มเติม</button>
-                </div>
+         </div>
         </div>
+    </div>
     <div class="footer">
         <div class="tagtype">
             <h2>แท็ก</h2>
@@ -226,17 +226,12 @@
             
         </div>
         <div class="follow">
-            <h2>ติดตาม</h2>
-                <span class="sIcon">
-                    <img src="/img/Icons/008-twitter.png" alt="">
-                    <img src="/img/Icons/036-facebook.png" alt="">
-                    <img src="/img/Icons/001-youtube.png" alt="">
-                </span>
-                <span class="social">
-                    <a href="#twitter"><h3>Twitter</h3></a>
-                    <a href="#facebook"><h3>FB</h3></a>
-                    <a href="#youtube"><h3>Youtube</h3></a>
-                </span>
+            <h2>ติดตามเรา</h2>
+            <div class="sIcon">
+                <div class="linkContainer"><img src="/img/Icons/008-twitter.png" alt=""> <a href="#twitter"><h3>Twitter</h3></a></div>
+                <div class="linkContainer"><img src="/img/Icons/036-facebook.png" alt=""> <a href="#facebook"><h3>FB</h3></a></div>
+                <div class="linkContainer"><img src="/img/Icons/001-youtube.png" alt=""> <a href="#youtube"><h3>Youtube</h3></a></div>
+            </div>
                 
         </div>
     </div>

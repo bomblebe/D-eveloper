@@ -1,0 +1,11 @@
+.footer h2, .footer h3{
+    position: relative;
+    top: 320px;
+    color: #AAAAAA;
+    text-align: center;
+    font-family: Mitr;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 15px;
+}

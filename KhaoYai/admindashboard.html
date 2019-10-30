@@ -56,31 +56,34 @@
         <div class="content-header">
                     <h1>แอดมินเว็บ</h1>
                     <button @click="ishidden=false" id="addmin">เพิ่มแอดมิน</button>
-                    <div class="overlay" v-if="!ishidden"></div>
-                    <div class="addAdmin" v-if="!ishidden">
-                            <div class="topic">
-                                <button @click="ishidden=true" type="button" class="xButton">+</button>
-                                <h1>กรอกอีเมลของแอดมินใหม่</h1>
-                            </div>
-                            <div class="emailContainer">
-                            <form action="" class="addAdminEmail">
-                                <label for="email"><h2>Email</h2></label>
-                                <input type="text" placeholder="Type here...">
-                            </form>
-                            </div>
-                            <div class="description">
-                                <h2>แอดมินคนใหม่จะได้รับรหัสผ่าน <br>และขั้นตอนการตั้งรหัสผ่านใหม่ ผ่านทางอีเมล</h2>
-                            </div>
-                        <div class="addAdminSubmit">
-                            <button type="button" id="sendEmail">ส่ง</button>
+                    <div class="overlay" v-if="!ishidden">
+                      <div class="addAdmin" v-if="!ishidden">
+                        <div class="topic">
+                            <button @click="ishidden=true" type="button" class="xButton">+</button>
+                            <h1>กรอกอีเมลของแอดมินใหม่</h1>
                         </div>
-            
+                        <div class="emailContainer">
+                        <form action="" class="addAdminEmail">
+                            <label for="email"><h2>Email</h2></label>
+                            <input type="text" placeholder="Type here...">
+                        </form>
+                        </div>
+                        <div class="description">
+                            <h2>แอดมินคนใหม่จะได้รับรหัสผ่าน <br>และขั้นตอนการตั้งรหัสผ่านใหม่ ผ่านทางอีเมล</h2>
+                        </div>
+                    <div class="addAdminSubmit">
+                        <button type="button" id="sendEmail">ส่ง</button>
                     </div>
+        
+                </div>
+                    </div>
+                    
         </div>
+        
         <div class="adminCardContainer">
           <div class="admincard" id="admin1">
-              <div class="overlay" v-if="showEdit||showDelete"></div>
-              <div class="editAdmin" v-if="showEdit">
+              <div class="overlay" v-if="showEdit||showDelete">
+                <div class="editAdmin" v-if="showEdit">
                   <div class="topic">
                       <button type="button" class="xButton" @click="showEdit=false" >+</button>
                           <h1>แก้ไขข้อมูลแอดมิน</h1>
@@ -125,14 +128,13 @@
                     <button id="delete">ลบ</button>
                 </div>
               </div>
+              </div>
 
 
               <div class="edit">
-                <button class="edit-container" @click="showEdit=true">
-                  <img src="/img/Icons/edit-black.png" alt="">
+                <button class="edit-container" @click="showEdit=true"></button>
                 </button>   
-                <button class="edit-container" @click="showDelete=true">
-                  <img src="/img/Icons/delete-black.png" alt="">
+                <button class="delete-container" @click="showDelete=true">
                 </button> 
               </div>
                     <div class="head">
@@ -150,8 +152,8 @@
                     </div>
           </div>
           <div class="admincard" id="admin2">
-            <div class="overlay" v-if="showEdit||showDelete"></div>
-            <div class="editAdmin" v-if="showEdit">
+            <div class="overlay" v-if="showEdit||showDelete">
+              <div class="editAdmin" v-if="showEdit">
                 <div class="topic">
                     <button type="button" class="xButton" @click="showEdit=false" >+</button>
                         <h1>แก้ไขข้อมูลแอดมิน</h1>
@@ -196,14 +198,14 @@
                   <button id="delete">ลบ</button>
               </div>
             </div>
+            </div>
+            
 
 
             <div class="edit">
               <button class="edit-container" @click="showEdit=true">
-                <img src="/img/Icons/edit-black.png" alt="">
               </button>   
-              <button class="edit-container" @click="showDelete=true">
-                <img src="/img/Icons/delete-black.png" alt="">
+              <button class="delete-container" @click="showDelete=true">
               </button> 
             </div>
                   <div class="head">

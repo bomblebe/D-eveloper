@@ -45,7 +45,7 @@ body {
     align-items: flex-end;
 }
 
-.content-header p{
+.content-header h2{
     position: relative;
     top: 52px;
     left: 158px;
@@ -64,6 +64,10 @@ body {
     width: 80px;
     height: 80px;
     background-color: #F98F0D;
+    background-image: url(/img/Icons/left-arrow.png);
+    background-size: 50px;
+    background-repeat: no-repeat; 
+    background-position: center;
     font-family: Mitr;
     font-size: 36px;
     color: #FBFBFB;
@@ -71,101 +75,60 @@ body {
     border-radius: 50px;
     cursor: pointer;
 }
-#texteditor{
-    background-color: #FBFBFB;
+#texteditor {
+    border-radius: 10px;
     width: 975px;
-    height: 545px;
-    margin: 101px auto 0 auto;
+    height: auto;
+    margin: 101px auto;
 }
-/* Sidebar Styles */
-
-#sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 381px;
-  height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
-  background: #FBFBFB;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+#texteditor input{
+  height: 60px;
+  width: 883px;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 47px;
+  box-shadow: 0px 0px 20px #A0A0A0;
 }
-
-.adminpics{
-    position: relative;
-    right: 22px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.tagAdd{
+  height: 70px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+  justify-content: center;
+  align-items: flex-start;
 }
-
-#adminName{
-    position: relative;
-    text-align: left;
-    font-family: Mitr;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 38px;
-    color: #424242;
+.tagManage h2, .tagManage h3{
+  font-family: Sarabun;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 47px;
+color: #424242;
+margin: 0 0 0 10%;
 }
-
-#logout{
-    text-align: left;
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 23px;
-    color: #F98F0D;
+.tagExample{
+  display: inline;
+  font-family: Mitr;
+  color: #FBFBFB;
+  background: #F98F0D;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align:center;
 }
-
-#sidebar header {
-    margin: 62px 0 82px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #FBFBFB;
-    font-size: 20px;
-    line-height: 0px;
-    text-align: center;
+.existingTag{
+  margin: 27px;
 }
-
-#sidebar header a {
-  color: #fff;
-  display: block;
-  text-decoration: none;
-}
-
-#sidebar header a:hover {
-  color: #fff;
-}
-
-#sidebar .nav a{
-    position: relative;
-    font-family: Mitr;
-    color: #424242;    ;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 57px;
-    
-}
-
-.navBut{
-    height: 50px;
-    padding: 0 0 0 42px;
-}
-
-#sidebar .nav a:hover{
-  background: none;
+.existingTag button{
+  font-family: Mitr;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
   color: #F98F0D;
-}
-
-#sidebar .nav a i{
-  margin-right: 16px;
+  background-color: #f1f1f1;
+  border: none;
 }

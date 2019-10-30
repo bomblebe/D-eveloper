@@ -1,0 +1,103 @@
+* {
+	box-sizing: border-box;
+}
+span {
+	display: inline-block;
+}
+#tagItems {
+	position: relative;
+	margin: 0 0 0 20px;
+}
+.input {
+	width: 883px;
+	min-height: 40px;
+	border: 1px solid #dcdfe6;
+	padding: 6px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 0px 0px 20px #A0A0A0;
+}
+.el-tag{
+    text-align: center;
+    display: inline-block;
+    font-family: Mitr;
+    color: #FBFBFB;
+    margin: 5px;
+    background-color: #F98F0D;
+    border-radius:5px ;
+    font-family: Mitr;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+.el-icon-close{
+    position: relative;
+    left: -12px;
+    margin: auto 5px auto 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    background: #F98F0D;
+    color: #FBFBFB;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.el-icon-close:hover{
+    background: #FFD55E;
+    color: #FBFBFB;
+}
+.el-select__tags-text{
+    margin: 5px 10px;
+}
+.add {
+    font-family: Sarabun;
+	min-width: 70px;
+	height: 20px;
+	margin: 2px 0 2px 6px;
+	outline: none;
+	color: #AAAAAA;
+}
+.add:empty:not(:focus):before {
+	content: attr(placeholder)
+}
+.tagList {
+	width: 100px;
+	max-height: 120px;
+	position: absolute;
+	padding: 0;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	box-shadow: 0 1.5px 3px rgba(0,0,0,0.16);
+	overflow-y: scroll;
+}
+.tagList:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		width: 0;
+		height: 0;
+		transform: translate(-50%, -100%);
+		border-width: 8px;
+		border-style: solid;
+		border-color: transparent;
+		border-bottom-color: rgba(0,0,0,0.2);
+}
+.tagList:after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: 0;
+		height: 0;
+		transform: translate(-50%, -97%);
+		border-width: 8px;
+		border-style: solid;
+		border-color: transparent;
+		border-bottom-color: #fff;
+    }
