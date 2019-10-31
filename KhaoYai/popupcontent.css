@@ -322,11 +322,11 @@
 }
 .editAdmin #submit:hover{
     background-color: #FFD55E;
-    color: #FBFBFB;
+    color: #FBFBFB;}
   
 /* post Delete*/
 .postDelete{
-    position: relative;
+    position: absolute;
     background: #FBFBFB;
     border-radius: 50px;
     width: 848px;
@@ -399,6 +399,9 @@
     border-radius: 50px;
     cursor: pointer;
 }
+.postDelete #delete:hover{
+    background-color: #FFD55E;
+}
 .postDelete #cancel{
     position: relative;
     top: 18px;
@@ -412,6 +415,9 @@
     border-radius: 50px;
     cursor: pointer;
     margin: 0 80px 0 0;
+}
+.postDelete #cancel:hover{
+    background-color: #FFD55E;
 }
 /*post Unpin*/
 .postUnpin{
@@ -594,3 +600,4 @@
     cursor: pointer;
     margin: 0 80px 0 0;
 }
+

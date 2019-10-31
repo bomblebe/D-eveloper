@@ -1,4 +1,4 @@
-var admin = new Vue({
+var admin1 = new Vue({
     el: '#admin1',
     data:{
         adminName: "John Doe",
@@ -9,7 +9,7 @@ var admin = new Vue({
     }
 
 }) 
-var admin = new Vue({
+var admin2 = new Vue({
     el: '#admin2',
     data:{
         adminName: "Jane Doe",
