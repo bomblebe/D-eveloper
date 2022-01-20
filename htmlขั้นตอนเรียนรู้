@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ข่าวใหญ่</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <a href="#contact"><p>ติดตามเรา</p></a>
+    <div class="home">
+        <h1><a href="http://127.0.0.1:5500/ข่าวใหญ่.html">#ข่าวใหญ่</a></h1>
+    </div>
+    <div class="main">
+        <form>
+            <label></label>
+            <input type="text" id="search" placeholder="ค้นหา">
+        </form>
+        <div class="home_right">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/ข่าวใหญ่.html">หน้าหลัก</a></li>
+                <li><a href="#">เกี่ยวกับเรา</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <a class="button" href="#popup1">Test Pop up</a>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>หัวข้อ popup</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form>
+                    <label>Text Field</label>
+                    <input type="textpop" id="searchpop" placeholder="Type here...">
+                    <label><br>Text Field</label>
+                    <input type="textpop2" id="searchpop2" placeholder="Type here...">
+                    <br>
+                    <button type="button">สมัครสมาชิก</button>
+                    <button type="button">เข้าสู่ระบบ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+            body {font-family: Arial;}
+            
+            /* Style the tab */
+            .tab {
+              overflow: hidden;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+            }
+            
+            /* Style the buttons inside the tab */
+            .tab button {
+              background-color: inherit;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+            }
+            
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+              background-color: #ddd;
+            }
+            
+            /* Create an active/current tablink class */
+            .tab button.active {
+              background-color: #ccc;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-top: none;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'London')">#ข่าวใหม่ล่าสุด</button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')">#ข่าวยอดนิยม</button>
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">#ข่าวทั้งหมด</button>
+            </div>
+            
+            <div id="London" class="tabcontent">
+                <button type="button">เทสข่าวที่1</button>
+            </div>
+            <div id="Paris" class="tabcontent"></div>
+            <div id="Tokyo" class="tabcontent"></div>
+            
+            <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            </script>
+    <div class="interest">
+        <h2>คุณอาจสนใจ</h2>
+    </div>
+
+
+    <div class="footer">
+        <h3>เเท็ก</h3>
+        <h4>แท็กหนึ่ง</h4>
+        <h4>แท็กสอง</h4>
+        <h4>แท็กสาม</h4>
+        <h4>แท็กสี่</h4>
+    </div>
+    <div id="contact">
+        <h3>ติดตามเรา</h3>
+        <h4>Facebook</h4>
+        <h4>Youtube</h4>
+        <h4>Twitter</h4>
+    </div>
+</body>
+
+</html>
+
+
+<!--css+++++++++++++++++++++++++-->
+*{
+  margin: 50;
+  padding: 0;
+}
+
+.main {
+  float: right;
+  list-style-type: none;
+}
+ul li{
+  display: inline-block;
+}
+.home{
+  font-size: 30px;
+}
+
+.box {
+  width: 40%;
+  
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.content{
+  text-align: center;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.tab{
+  margin: 10%;
+}
+.london{
+  
+}
+
+
+
+.footer{
+  position: relative;
+  bottom: 1px;
+}
+}
